@@ -15,8 +15,8 @@ def process_shows(shows_info):
                 # Process the dict only if drm is true and episode count is greater than 0
                 if show["drm"] and show["episodeCount"] > 0:
                     # Select only image, slug and title keys from the matched dict
-                    dict_you_want = {your_key: show[your_key] for your_key in ["image","slug","title"]}
-                    filtered_shows.append(dict_you_want)
+                    final_dict = {your_key: show[your_key] for your_key in ["image","slug","title"]}
+                    filtered_shows.append(final_dict)
 
         # Remove the showImage key from the image key's value to retain only the value
         for filtered_show in filtered_shows:
